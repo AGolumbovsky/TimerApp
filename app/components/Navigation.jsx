@@ -5,7 +5,7 @@ var Navigation = () => {
     return (
       <div className="top-bar">
         <div className="top-bar-left">
-          <ul className="menu">
+          <ul className="menu menu-text">
             <li className="menu-item">
               React Timer App
             </li>
@@ -21,7 +21,7 @@ var Navigation = () => {
         <div className="top-bar-right">
           <ul className="menu">
             <li className="menu-text">
-              Created by <a href="http://github.com/AGolumbovsky" target="_blank"> Andriy Golumbovsky</a>
+              Contribute on <a href="http://github.com/AGolumbovsky/TimerApp" target="_blank"> GitHub</a>
             </li>
           </ul>
         </div>
