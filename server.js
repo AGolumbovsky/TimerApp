@@ -15,6 +15,6 @@ app.use(function (req, res, next){
 app.use(express.static('public'));
 
 app.listen(PORT, function () {
-  console.log('Express TimerApp is up on port ' + PORT);
+  console.log('TimerApp is up on port ' + PORT);
 });
 

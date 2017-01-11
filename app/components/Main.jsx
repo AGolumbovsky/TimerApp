@@ -8,8 +8,8 @@ var Main = (props) => {
       <div>
         <div>
           <Navigation/>
-          <p>Main.jsx Rendered</p>
-          <p> Some shit to dispay Main </p>
+          <p>Main.jsx Rendered a</p>
+          {props.children}
         </div>
       </div>
     </div>

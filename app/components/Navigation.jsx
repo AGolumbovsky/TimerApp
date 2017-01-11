@@ -5,15 +5,15 @@ var Navigation = () => {
     return (
       <div className="top-bar">
         <div className="top-bar-left">
-          <ul className="menu menu-text">
-            <li className="menu-item">
+          <ul className="menu">
+            <li className="menu-text">
               React Timer App
             </li>
             <li>
               <IndexLink to="/" activeClassName="active-link">Timer</IndexLink>
             </li>
             <li> 
-              <Link to="/" activeClassName="active-link">Countdown</Link>
+              <Link to="/countdown" activeClassName="active-link">Countdown</Link>
             </li>
           </ul>                
         </div>
@@ -21,7 +21,7 @@ var Navigation = () => {
         <div className="top-bar-right">
           <ul className="menu">
             <li className="menu-text">
-              Contribute on <a href="http://github.com/AGolumbovsky/TimerApp" target="_blank"> GitHub</a>
+              See code on <a href="http://github.com/AGolumbovsky/TimerApp" target="_blank"> GitHub</a>
             </li>
           </ul>
         </div>
