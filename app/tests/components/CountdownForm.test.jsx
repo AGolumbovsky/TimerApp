@@ -17,7 +17,7 @@ describe('CountdownForm', () => {
        var $el = $(ReactDOM.findDOMNode(CountdownForm));
 
        countdownForm.refs.seconds.value = '109';
-       TestUtils.Simulate.submit($el.find('.form')[0]);
+       TestUtils.Simulate.submit($el.find('form')[0]);
 
        expect(spy).toHaveBeenCalledWith(109);
     });

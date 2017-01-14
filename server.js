@@ -14,7 +14,10 @@ app.use(function (req, res, next){
 
 app.use(express.static('public'));
 
-app.listen(PORT, function () {
-  console.log('TimerApp is up on port ' + PORT);
-});
+// create a timestamp for nodemon
+var currentDate = new Date();
+var timestamp = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
 
+app.listen(PORT, function () {
+  console.log('TimerApp is up on port ' + PORT + '\n' + timestamp);
+});
