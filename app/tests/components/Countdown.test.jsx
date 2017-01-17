@@ -25,13 +25,13 @@ describe('Countdown', () => {
             }, 1001)
         });
 
-        it('should not set count < 0', (ass) => { // done as parameter
+        it('should not set count < 0', (done) => {
             var countdown = TestUtils.renderIntoDocument(<Countdown/>);
             countdown.handleSetCountdown(1);
 
             setTimeout(() => {
                 expect(countdown.state.count).toBe(0);
-                ass();
+                done();
             }, 3001)
         });
     });
