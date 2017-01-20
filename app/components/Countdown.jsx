@@ -2,6 +2,7 @@ var React = require('react');
 
 var Clock = require('Clock');
 var CountdownForm = require('CountdownForm');
+var Controls = require('Controls');
 
 // container component, maintains state
 var Countdown = React.createClass({
@@ -35,11 +36,19 @@ var Countdown = React.createClass({
         });
     },
     render: function() {
-        var {count} = this.state;
+        var {count, countdownStatus} = this.state;
+        var renderControlArea = () => {
+            if(countdownStatus !== 'stopped') {
+                return <Controls coundownStatus={countdownStatus} onStatusChange={}/>
+            }
+            else {
+                return <CountdownForm onSetCountdown={this.handleSetCountdown}/>
+            }
+        }
         return (
             <div>
                 <Clock totalSeconds={count}/>
-                <CountdownForm onSetCountdown={this.handleSetCountdown}/>
+                {renderControlArea()}
             </div>
         );
     }
